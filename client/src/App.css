@@ -1,0 +1,604 @@
+main{
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto
+
+}
+.container {
+    display: flex;
+    justify-content: flex-start;  /* Centers the image horizontally */
+    align-items: center;      /* Centers the image vertically */
+
+  }
+  
+  
+img{
+    max-width: 68%;
+    max-height: auto;
+}
+p{
+    flex: 1;
+    line-height: 1.6;             /* Adjusts the line height for symmetric gaps between lines */
+    text-align: justify;  
+
+    
+    font-family: 'Arial', sans-serif; /* Sets the font family */
+    font-size: 20px;               /* Sets font size */
+    font-weight: bold;             /* Makes text bold */
+    color: #ff000da8;                   /* Sets a dark gray color for the text */
+    letter-spacing: 0.5px;         /* Slightly increases the spacing between letters */
+    text-transform: uppercase; 
+    font-style: italic;
+}
+
+  
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Align items vertically */
+    padding: 15px 30px; /* Padding for spacing */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Link Styling */
+header a {
+    text-decoration: none; /* Remove underline */
+    color: rgb(0, 0, 0); /* Neutral black text color */
+    font-family: 'Arial', sans-serif; /* Simple, clean font */
+}
+
+/* Logo Styling */
+header a.logo {
+    font-weight: bolder; /* Bold text for logo */
+    font-size: 1.5rem; /* Large font size */
+    color: #424242; /* Dark grey for emphasis */
+}
+
+/* Navigation Links */
+header nav {
+    display: flex;
+    gap: 15px; /* Space between links */
+    font-weight: bold; /* Bold text for navigation */
+    font-size: 17px; /* Standard font size */
+}
+
+/* Navigation Link Hover Effect */
+header nav a:hover {
+    color: #757575; /* Lighter grey on hover */
+    text-decoration: underline; /* Underline on hover for clarity */
+}
+
+
+.login-container, .register-container{
+   max-width: 400px;
+   margin: auto
+
+}
+.login-container h2, .register-container h2{
+    margin-bottom: 15px; /* Reduced margin */
+    color: #202053;
+    text-align: center;
+    font-size: 30px; /* Slightly smaller font */
+}
+
+.login-container input, .register-container input{
+width: 100%;
+padding: 8px; /* Reduced padding */
+margin-bottom: 10px; /* Reduced margin */
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+}
+.register-container select{
+    width: 104%;
+    padding: 8px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-container button, .register-container button {
+    margin-top: 20px;
+    width: 105%;
+    height: 40px;
+    align-content: center;
+    background-color: #2aac2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px; /* Slightly smaller font */
+    cursor: pointer;
+  }
+#setLoc {
+    margin-top: 2px;
+    margin-bottom: 10px;
+    width: 105%;
+    height: 30px;
+    align-content: center;
+    background-color: #686b68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px; /* Slightly smaller font */
+    cursor: pointer;
+}
+
+  .login-container h5{
+    margin-top: 15px; /* Reduced margin */
+    color: #202053;
+    text-align: center;
+    font-size: 20px; /* Slightly smaller font */
+    margin-bottom: 0;
+}
+
+.quadrants {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: 1fr 1fr;  /* Two rows */
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .profileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  #box1 { background-color: #ffffff; } /* First quadrant */
+  #box2 {
+    background-color: #f8f8f8; /* Light blue background */
+    text-align: center; /* Center-align all content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px; /* Add some spacing around the box */
+}
+  #box3 { background-color: #f8f8f8; } /* Third quadrant */
+  #box4 {
+    background-color: #ffffff; /* White background */
+    border: none; /* No borders */
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center-align all content */
+    margin: 10px; /* Optional: Add spacing around the box */
+}
+ 
+  
+  #box1 h4 {
+    font-size: 15px; /* Increase font size for prominence */
+    color: #333; /* Dark text color */
+    font-weight: bold;
+    text-align: center; /* Center-align the header */
+    margin-bottom: 15px; /* Add space below the header */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    letter-spacing: 1px; /* Add some spacing between letters */
+}
+
+/* Style for the Profile List */
+#box1 ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0 auto; /* Center-align the list container */
+    width: fit-content; /* Ensure the list adjusts to its content */
+    border: 1px solid #ddd; /* Add a light border */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Style for Each List Item */
+#box1 ul li {
+    font-size: 16px; /* Adjust font size */
+    color: #555; /* Slightly muted text color */
+    padding: 10px 15px; /* Add padding inside each item */
+    border-bottom: 1px solid #ddd; /* Add a divider between items */
+}
+
+#box2 h4 {
+    font-size: 18px; /* Slightly larger font */
+    color: #3c3c3d; /* Deep blue for emphasis */
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Style for the Secondary Heading */
+#box2 h5 {
+    font-size: 15px; /* Adjust font size */
+    color: #333333; /* Slightly lighter blue */
+    margin-bottom: 20px; /* Space below the subheading */
+}
+
+/* Style for the Button */
+#box2 button {
+    background-color: #055cff; /* Vibrant blue */
+    color: #ffffff; /* White text */
+    font-size: 16px; /* Adjust font size */
+    margin-bottom: auto;
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for the Button */
+#box2 button:hover {
+    background-color: #0d47a1; /* Darker blue on hover */
+}
+
+
+  .action {
+    display: flex;
+    justify-content: center; /* Align buttons horizontally at the center */
+    align-items: center; /* Ensure buttons are vertically aligned */
+    gap: 10px; /* Add spacing between the buttons */
+    margin-top: 10px;
+}
+
+/* Optional: Button-specific styling */
+.edit-button, .delete-button {
+    padding: 8px 16px; /* Adjust button size */
+    font-size: 14px; /* Ensure consistent font size */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+}
+
+.delete-button {
+    background-color: #ff3324; /* Red background */
+    color: white;
+}
+
+/* Style for Box 3 Container */
+/* Style for Box 3 Container */
+#box3 {
+    background-color: #f5f5f5; /* Light grey background for a subtle look */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner spacing */
+    text-align: center; /* Center-align all content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 10px; /* Add spacing around the box */
+}
+
+/* Style for the Heading */
+#box3 h4 {
+    font-size: 15px; /* Slightly larger font */
+    color: #585656; /* Dark grey for emphasis */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 15px; /* Space below the heading */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    letter-spacing: 1px; /* Add some spacing between letters */
+}
+
+/* Style for the Form */
+#box3 .searchDonor {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align items */
+    gap: 15px; /* Space between form elements */
+}
+
+/* Style for the Dropdown */
+#box3 .searchDonor select {
+    font-size: 15px; /* Adjust font size */
+    background-color: #ffffff; /* Light grey background */
+    color: #2e2e2e; /* Dark text for readability */
+    width: 100%; /* Adjust width for responsiveness */
+    max-width: fit-content; /* Restrict maximum width */
+    outline: none; /* Remove outline */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Highlight on Focus */
+#box3 .searchDonor select:focus {
+    background-color: #d6d6d6; /* Slightly darker grey on focus */
+}
+
+/* Style for the Button */
+#box3 .searchDonor button {
+    background-color: #7072fc; /* Medium grey */
+    color: #ffffff; /* White text */
+    font-size: 15px; /* Adjust font size */
+    padding: 10px 20px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover Effect for the Button */
+#box3 .searchDonor button:hover {
+    background-color: #4625ff; /* Darker grey on hover */
+}
+
+
+/* Style for the Heading in Box 4 */
+#box4 h4 {
+    font-size: 18px; /* Larger font size for emphasis */
+    color: #424242; /* Dark grey text */
+    font-weight: bold; /* Bold for strong emphasis */
+    margin-bottom: 15px; /* Space below the heading */
+    text-transform: uppercase; /* Optional: Uppercase text for a professional look */
+}
+
+/* Style for the Donate Button */
+#box4 button {
+    background-color: #7072fc; /* Light grey background */
+    color: #ffffff; /* White text for contrast */
+    font-size: 15px; /* Font size for readability */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect for the Donate Button */
+#box4 button:hover {
+    background-color: #0a22fd; /* Darker grey on hover */
+}
+
+
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    z-index: 1000; /* Sit on top */
+}
+
+/* Modal content */
+.modal-content {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(172, 160, 160);
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-box .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-box h3 {
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-buttons .btn-sure .btn-save {
+    background: rgb(214, 8, 8);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.modal-buttons .btn-save {
+    background: rgb(5, 122, 40);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+.modal-buttons .btn-cancel {
+    background: #585858;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-buttons .btn-sure:hover {
+    background: rgb(163, 7, 7);
+    color: white;
+}
+.modal-buttons .btn-save:hover {
+    background: rgb(13, 194, 43);
+    color: white;
+}
+
+.modal-buttons .btn-cancel:hover {
+    background: #011aff;
+    color: rgb(250, 245, 245);
+}
+
+.edit {
+    display: flex;
+    flex-direction: column;
+    width: 70%;/* Adjust based on desired width */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each input field */
+.edit input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Focus effect for input fields */
+.edit input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Parent Container: Grid Layout for Side-by-Side Display */
+.contianerList {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between the columns */
+    margin: 20px auto; /* Center the grid on the page */
+    max-width: 1200px; /* Prevent it from stretching too wide */
+    width: 90%; /* Responsive width */
+    box-sizing: border-box; /* Include padding in dimensions */
+}
+
+
+/* Left Container (List) */
+.containerList1 , .donorContainerList{
+    background-color: #f9f9f9; /* Light grey background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.donorContainerList{
+        width: 88%; /* Take 90% of the page width */
+        margin: 0 auto; /* Center the container horizontally */
+        position: relative; /* Ensures child positioning if needed */
+    
+}
+.List1 h5{
+        color: red; /* Set text color to red */
+        font-weight: bold; /* Make the text bold */
+        text-align: center; /* Center align the text horizontally */
+        font-size: 20px; /* Optional: Adjust font size */
+        margin-top: 20px; /* Remove any default margins */
+        display: flex; /* Use flexbox for centering */
+        align-items: center; /* Vertically center text */
+        justify-content: center; /* Horizontally center text */
+}
+
+
+/* Right Container (Map) */
+.containerList2 {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Map Styling */
+.mapContainer {
+    display: flex;
+    justify-content: center; /* Align the map in the center horizontally */
+    align-items: center;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.containerList2 h5 , .donorContainerList{
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+.containerList1 h2,
+.containerList1 h3 , .donorContainerList h2,
+.donorContainerList h3 {
+    text-align: center; /* Center align headings in table */
+    margin-bottom: 20px;
+}
+.centerList, .donerList {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.centerList th,
+.centerList td , .donerList th, .donerList td{
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.centerList th ,.donerList th {
+    background-color: #e2e2e2; /* Slightly darker grey for table header */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.centerList tbody tr:nth-child(odd) , .donerList tbody tr:nth-child(odd){
+    background-color: #f7f7f7; /* Alternating row color */
+}
+
+.centerList tbody tr:hover , .donerList tbody tr:hover{
+    background-color: #a4a7a8; /* Highlight on hover */
+}
+
+
+
+
+;
+

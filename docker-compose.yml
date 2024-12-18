@@ -1,0 +1,39 @@
+services:
+
+  backend:
+    build: ./api
+    container_name: backend
+    environment:
+      - SECRET_KEY = abcdwxyz
+    ports:
+      - "4000:4000"           
+    depends_on:
+      - db
+
+  frontend:
+    build: ./client
+    container_name: frontend
+    ports:
+      - "3000:3000"            
+    depends_on:
+      - backend   
+
+
+
+  db:
+    image: mysql:9.1.0
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword       # Root password
+      MYSQL_DATABASE: blooddonation             # Database name to create
+      MYSQL_USER: user                        # Custom database user
+      MYSQL_PASSWORD: 12345678            # Custom database password
+    ports:
+      - "3306:3306"                           # Map MySQL port
+    volumes:
+      - ./database/blooddonation.sql:/docker-entrypoint-initdb.d/blooddonation.sql
+      - mysql_data:/var/lib/mysql             # Persistent data storage
+
+volumes:
+  mysql_data:
