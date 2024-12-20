@@ -4,7 +4,11 @@ services:
     build: ./api
     container_name: backend
     environment:
-      - SECRET_KEY = abcdwxyz
+      - SECRET_KEY=abcdwxyz
+      - DB_HOST=db
+      - DB_USER=user
+      - DB_PASSWORD=12345678
+      - DB_NAME=blooddonation
     ports:
       - "4000:4000"           
     depends_on:
