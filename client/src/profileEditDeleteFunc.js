@@ -6,11 +6,12 @@ import { useState, useEffect } from 'react';
 
 
 const DeleteProfile=({profileData})=>{
+    const API_URL = process.env.REACT_APP_API_URL;
     const [showPopup, setShowPopup] = useState(false);
 
     const handleDelete = async() => {
         try {
-            const response = await fetch("http://localhost:4000/delete-profile", {
+            const response = await fetch(`${API_URL}/delete-profile`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json",
@@ -72,6 +73,7 @@ const EditProfile=({profileData})=>{
 
     const [showPopup1, setShowPopup1] = useState(false);
     const [editFormData, setEditFormData] = useState(null);
+    const API_URL = process.env.REACT_APP_API_URL;
 
     const handleClickPopup = async() => {
         setShowPopup1(true);
@@ -96,7 +98,7 @@ const EditProfile=({profileData})=>{
     const handleEditSubmit = async (event) => {
         event.preventDefault();
         
-        const response = await fetch("http://localhost:4000/editProfile", {
+        const response = await fetch(`${API_URL}/editProfile`, {
          method: 'POST',
          headers: {
               'Content-Type': 'application/json',

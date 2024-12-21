@@ -18,7 +18,7 @@ function Register() {
         longitude:'',
         password: '',
       });
-    
+    const API_URL = process.env.REACT_APP_API_URL;
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
     const [error, setError] = useState('');
@@ -53,7 +53,7 @@ function Register() {
           );
           return;
         }
-        const data = await fetch('http://localhost:4000/register', {
+        const data = await fetch(`${API_URL}/register`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

@@ -22,6 +22,7 @@ function Profile(){
     const [donationStatus, setDonationStatus] = useState('');
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const API_URL = process.env.REACT_APP_API_URL;
    
     const [formData, setFormData] = useState({
         bloodGroup: "",
@@ -60,7 +61,7 @@ function Profile(){
                     setIsLoading(false);
                     return;
                 }
-                const response = await fetch('http://localhost:4000/profile', {
+                const response = await fetch(`${API_URL}/profile`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`, // Attach token in Authorization header

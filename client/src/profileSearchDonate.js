@@ -40,6 +40,7 @@ const useFetch =()=>{
 
 const DonateBlood = ({profileData,formData})=>{
         const navigate = useNavigate();
+        const API_URL = process.env.REACT_APP_API_URL;
         
         const handleDonateBlood= async(event)=>{
             event.preventDefault();
@@ -47,7 +48,7 @@ const DonateBlood = ({profileData,formData})=>{
             alert("Please set your current location")
             return;
         }
-        const response= await fetch("http://localhost:4000/list2", {
+        const response= await fetch(`${API_URL}/list2`, {
             method: 'POST',
             headers: {
                  'Content-Type': 'application/json',
@@ -80,7 +81,7 @@ const SearchDonor =({formData, setFormData})=>{
     
     const navigate = useNavigate();
     
-    
+    const API_URL = process.env.REACT_APP_API_URL;
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -98,7 +99,7 @@ const SearchDonor =({formData, setFormData})=>{
         }
 
         console.log(formData)
-        const response1 = await fetch("http://localhost:4000/list", {
+        const response1 = await fetch(`${API_URL}/list`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -111,7 +112,7 @@ const SearchDonor =({formData, setFormData})=>{
         }
         const data1 = await response1.json();
         
-        const response2= await fetch("http://localhost:4000/list2", {
+        const response2= await fetch(`${API_URL}/list2`, {
             method: 'POST',
             headers: {
                  'Content-Type': 'application/json',
